@@ -10,7 +10,7 @@ public class MaxArray {
   }
   public static int Sum(int[] a, int n) {
     if (n == 1) return a[0];
-    return a[n - 1] + sum(a,n-1);
+    return a[n - 1] + Sum(a,n-1);
 }
   
   public static int maxElement(int[] a, int l , int r) {
