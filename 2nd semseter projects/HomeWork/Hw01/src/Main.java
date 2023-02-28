@@ -1,4 +1,7 @@
 package HomeWork.Hw01.src;
+
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         line line = new line(new Point2D(1,5),new Point2D(5,2));
@@ -55,6 +58,23 @@ public class Main {
         }
         m.printall();
         System.out.println(((Areaable)m).getArea());
+        
+        try {
+            System.out.println("Unsorted figures:");
+            for (figure f : figures) {
+                f.printall();
+            }
+            System.out.println();
+        
+            Arrays.sort(figures);
+            System.out.println("sorted figures:");
+            for (figure f : figures) {
+                f.printall();
+                System.out.println();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

@@ -1,5 +1,5 @@
 package HomeWork.Hw01.src;
-public abstract class figure {
+public abstract class figure implements Comparable<figure> {
 
     protected Point2D p1;
     protected Point2D p2;
@@ -54,6 +54,18 @@ public abstract class figure {
     public abstract void draw();
 
     public abstract double getcontour();
+
+    public int compareTo(figure other) {
+        double thisPerimeter = this.getcontour();
+        double otherPerimeter = other.getcontour();
+        if (thisPerimeter < otherPerimeter) {
+            return -1;
+        } else if (thisPerimeter > otherPerimeter) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 
 
     
