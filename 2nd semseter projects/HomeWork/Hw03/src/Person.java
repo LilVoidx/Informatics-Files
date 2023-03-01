@@ -1,4 +1,4 @@
-public abstract class Person implements Comparable<Person> {
+public abstract class Person implements Comparable {
 
     protected String name;
     protected String department;

@@ -29,11 +29,6 @@ public class Administrator extends Person implements isalary{
     public double getFullSalary() {
         return (getsalary()  + getBounes()) - gettax();
     }
-    
-    @Override
-    public int compareTo(Person person) {
-        return this.name.compareTo(person.name);
-    }
 
     @Override
     public double gettax() {

@@ -31,11 +31,6 @@ public class Engineer extends Person implements isalary{
     }
     
     @Override
-    public int compareTo(Person person) {
-        return this.name.compareTo(person.name);
-    }
-
-    @Override
     public double gettax() {
         if(getsalary() > 10000){
             return tax = getsalary()  * 0.2;
