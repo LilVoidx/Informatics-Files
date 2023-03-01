@@ -1,6 +1,6 @@
 package lab.lab02;
 
-public class Person implements Comparable {
+public class Person implements Comparable<Person> {
 
     private String name;
     private int age;
@@ -45,7 +45,7 @@ public class Person implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o){
+    public int compareTo(Person o){
         return name.compareTo(((Person)o).name);
 //        if(this.age == ((Person)o).age)
 //            return 0;
@@ -53,6 +53,7 @@ public class Person implements Comparable {
 //            return -1;
 //        return 1;
     }
+
 }
 
 

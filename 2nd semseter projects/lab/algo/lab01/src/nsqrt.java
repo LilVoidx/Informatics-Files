@@ -11,6 +11,7 @@ public class nsqrt {
         double x = calculate(n);
 
         System.out.println("x(" + n +") = " + x);
+        scs.close();
     }
 
     public static double calculate(int n) {

@@ -3,6 +3,7 @@ public class MaxArray {
   public static void main(String[] args) {
     
     int[] array = {6,-9,57,120,0,4,9,17,-4};
+    System.out.println(array);
 
     //System.out.println(maxElement(array));
     
@@ -26,7 +27,9 @@ public class MaxArray {
     if(n == 1) return a[0];
     if(n == 2) return Math.max(a[0], a[1]);
     return Math.max(maxElement(a , n-1), a[n - 1]);
+
   }
+  
 
   //public static int maxElement(int[] a) {
    //int max = a[0];
