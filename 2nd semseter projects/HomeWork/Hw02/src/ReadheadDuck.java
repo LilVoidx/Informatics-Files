@@ -1,4 +1,4 @@
-public class ReadheadDuck extends Duck{
+public class ReadheadDuck extends Duck implements Quackable,Flyable{
 
     @Override
     public void display() {
