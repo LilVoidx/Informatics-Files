@@ -5,11 +5,11 @@ public class Main {
         worker.print();
         System.out.println("===========================");
 
-        Engineer engineer = new Engineer("Kareem", 30 ,"Electrical engineering", 506546);
+        Engineer engineer = new Engineer("Kareem", 30 ,"Electrical engineering", 106546);
         engineer.print();
         System.out.println("===========================");
 
-        Administrator administrator = new Administrator("Youssef", 20 ,"CEO", 167506);
+        Administrator administrator = new Administrator("Youssef", 20 ,"CEO", 567506);
         administrator.print();
         System.out.println("===========================");
 
@@ -44,10 +44,16 @@ public class Main {
             }
         }
         System.out.println("The oldest person :"+people[oldest].getName());
-        System.out.println();
         System.out.println("==================================================");
         //===============================================================================================
 
+        Person richest = people[0];
+        for (int i = 0; i < people.length; i++) {
+            if(people[i].compareTo(richest) == 1)
+            richest = people[i];
+        }
+        System.out.println("The richest : " + richest);
+        
     }
 
 }

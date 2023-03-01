@@ -30,9 +30,10 @@ public class Worker extends Person implements isalary {
     }
 
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(Person person) {
+        return this.name.compareTo(person.name);
     }
+
 
     @Override
     public double gettax() {

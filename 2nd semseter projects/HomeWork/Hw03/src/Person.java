@@ -1,4 +1,4 @@
-public abstract class Person implements Comparable {
+public abstract class Person implements Comparable<Person> {
 
     protected String name;
     protected String department;
@@ -12,7 +12,7 @@ public abstract class Person implements Comparable {
         super();
         this.name = name;
         this.age = age;
-        this.department = department;
+        this.department = department;           
         this.salary = salary;
     }
  
@@ -54,14 +54,12 @@ public abstract class Person implements Comparable {
     
     public abstract void  print();
     
+    
     @Override
-    public int compareTo(Object o){
-        return name.compareTo(((Person)o).name);
-//        if(this.age == ((Person)o).age)
-//            return 0;
-//        if(this.age < ((Person)o).age)
-//            return -1;
-//        return 1;
+    public double compareTo(Person person){
+        double firstsalary = getsalary();
+        double secondsalary = person.getsalary();
+        return Double.compare(firstsalary,secondsalary);
     }
 
 }
