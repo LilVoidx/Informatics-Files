@@ -1,18 +1,16 @@
-public class DecoyDuck extends Duck{
+public class DecoyDuck extends Duck {
 
-    @Override
-    public void Doall() {
-        display();
-        swim();
+    public DecoyDuck() {
+        quackBehavior = new MuteQuack();
+        flyBehavior = new FlyNoWay();
     }
 
-    @Override
     public void display() {
-        System.out.println("its a decoy");
+        System.out.println("This is a Decoy Duck");
     }
 
     @Override
-    public void swim() {
-        System.out.println("decoys dont swim or swim idk");
-    }
+	public void swim() {
+		System.out.println("I dont swim");
+	}
 }

@@ -1,17 +1,37 @@
 public class Main{
     public static void main(String[] args) {
         
-        MallardDuck md = new MallardDuck();
-        ReadheadDuck rd = new ReadheadDuck();
-        RubberDuck Rd = new RubberDuck();
-        DecoyDuck dd = new DecoyDuck();
+        MallardDuck mallard = new MallardDuck();
+        mallard.display();
+        mallard.swim();
+        mallard.performQuack();
+		mallard.performFly();
+        System.out.println();
+    
+        ReadheadDuck readhead = new ReadheadDuck();
+        readhead.display();
+        readhead.swim();
+        readhead.performQuack();
+		readhead.performFly();
+        System.out.println();
 
-        md.Doall();
+        RubberDuck rubber = new RubberDuck();
+        rubber.display();
+        rubber.swim();
+        rubber.performQuack();
+		rubber.performFly();
         System.out.println();
-        rd.Doall();
+
+        DecoyDuck decoy = new DecoyDuck();
+        decoy.display();
+        decoy.swim();
+        decoy.performFly();
+        decoy.performQuack();
+		decoy.setFlyBehavior(new FlyWithWings());
+		decoy.setQuackBehavior(new Quack());
+		decoy.performFly();
+        decoy.performQuack();
         System.out.println();
-        Rd.Doall();
-        System.out.println();
-        dd.Doall();
+
     }
 }
