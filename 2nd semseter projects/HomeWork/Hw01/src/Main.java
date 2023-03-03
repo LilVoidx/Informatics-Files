@@ -76,6 +76,13 @@ public class Main {
             e.printStackTrace();
         }
 
+        figure biggiest = figures[0];
+        for (int i = 0; i < figures.length; i++) {
+            if(figures[i].compareTo(biggiest) == 1)
+            biggiest = figures[i];
+        }
+        System.out.println("The biggiest peremiter : " + biggiest.getcontour());
+
     }
 
     public static double TotalCLength(figure[] figures) {
