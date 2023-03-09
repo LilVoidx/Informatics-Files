@@ -22,6 +22,7 @@ public class Sorting {
                     index = j;
                 }
             }
+            
             int min = array[index];
             array[index] = array[i];
             array[i] = min;
